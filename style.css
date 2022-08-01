@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #2C3246;
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s all ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 60px;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    height: 290px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: 0.4s all ease-in-out;
+}
+
+.card-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 0 20px 23px;
+}
+
+.card-price {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    color: #0eaa61;
+}
+
+.card-title {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.card-location {
+    font-size: 13px;
+    color: #414141;
+}
+
+/* E F E C T O   H O V E R */
+
+.card:hover {
+    width: 320px;
+    height: 420px;
+    transition: 0.4s all cubic-bezier(0.28, 0.01, 0.3, 1.02) 0.2s;
+    box-shadow: 20px 25px 20px rgba(252, 252, 252, 0.103);
+}
+
+.card:hover img {
+    transition: all 0.4;
+    transform: scale(1.8);
+}
+
+.card:hover .card-image {
+    transition: 0.5s all (0.28, 0.01, 0.3, 1.02) 0.2s;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.card:hover .card-price {
+    color: #9bffd0;
+}
+
+.card:hover .card-title {
+    color: #ffffff;
+}
+
+.card:hover .card-location {
+    font-size: 13px;
+    color: #ffffff;
+}
